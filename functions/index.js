@@ -9,11 +9,6 @@ const app = express();
 const { body, validationResult } = require("express-validator");
 app.use(cors({ origin: true }));
 
-// const auth = express();
-
-
-// const API_KEY = "AIzaSyA-Ep8wcXGwnNrivN2yYjm1PFYRfpjPaX8";
-
 app.get("/", async (req, res) => {
     const snapshot = await admin.firestore().collection("pusat_kesehatans").get();
 
